@@ -119,10 +119,20 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
+.site-nav .link::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: #2196f3;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
