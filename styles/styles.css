@@ -111,6 +111,7 @@ img {
 }
 
 .site-nav .link {
+  position: relative;
   padding: 10px;
   color: var(--title-text-color);
 
@@ -120,12 +121,14 @@ img {
   letter-spacing: 0.02em;
 }
 
-.site-nav .link::after {
+.site-nav .link.current::after {
+  position: absolute;
   content: "";
   display: block;
-  width: 48px;
+  width: 100%;
   height: 4px;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .site-nav .link:hover,
