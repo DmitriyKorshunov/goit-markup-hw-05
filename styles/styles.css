@@ -361,6 +361,37 @@ img {
   margin-left: 30px;
 }
 
+.work-item {
+  position: relative;
+}
+
+.work-text {
+  display: inline-block;
+  position: absolute;
+
+  width: 205px;
+  height: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  /*color: #ffffff;*/
+}
+
+.work-text::before {
+  position: absolute;
+
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /*---------TEAM--------*/
 
 .section-team {
@@ -606,15 +637,20 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  /*opacity: 0;*/
+  opacity: 0;
 
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-action:hover {
+  opacity: 1;
 }
 
 .portfolio-action-text {
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
