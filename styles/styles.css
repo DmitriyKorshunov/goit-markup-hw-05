@@ -544,6 +544,9 @@ img {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 
 .button:hover,
