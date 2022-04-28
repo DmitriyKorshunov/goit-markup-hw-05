@@ -387,8 +387,6 @@ img {
   position: absolute;
   bottom: 0;
 
-  content: "";
-
   width: 370px;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
@@ -615,15 +613,6 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/*.portfolio-list .list {
-  transition: translateY 250ms var(--timing-function);
-}*/
-
-.portfolio-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
 .portfolio-title {
   margin-bottom: 4px;
   color: var(--title-text-color);
@@ -649,38 +638,35 @@ img {
   letter-spacing: 0.03em;
 }
 
-.portfolio-item:hover .portfolio-action {
-  transform: translateY(0);
-}
-
-.portfolio-action {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  transform: translateY(100%);
-  transition: translateY 500ms var(--timing-function);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-action-text {
   position: absolute;
+  top: 0;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 322px;
-  height: 168px;
+  width: 100%;
+  height: 100%;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
+
+.portfolio-link:hover .portfolio-action-text,
+.portfolio-link:focus .portfolio-action-text {
+  transform: translateY(0);
+}
+
 /*-------------FOOTER------------ */
 
 .footer {
