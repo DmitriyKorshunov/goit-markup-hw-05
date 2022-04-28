@@ -138,8 +138,8 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-  transform: scaleX(0);
-  transition: transform 250ms var(--timing-function);
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -151,12 +151,8 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav .link:hover::after,
-.site-nav .link:focus::after {
-  transform: scaleX(1);
-}
 .site-nav .link.current::after {
-  transform: scaleX(1);
+  opacity: 1;
 }
 
 /* auth-nav */
@@ -619,8 +615,17 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+/*.portfolio-list .list {
+  transition: translateY 250ms var(--timing-function);
+}*/
+
+.portfolio-list .item:hover .portfolio-action {
+  transform: translateY(0);
+}
+
 .portfolio-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-title {
@@ -652,16 +657,18 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
 
+  transform: translateY(100%);
+  /*transition: translateY 500ms var(--timing-function);*/
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.portfolio-action:hover {
+/*.portfolio-action:hover {
   opacity: 1;
-}
+  transform: translateY(0);
+}*/
 
 .portfolio-action-text {
   position: absolute;
@@ -669,6 +676,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: block;
   width: 322px;
   height: 168px;
 
@@ -818,6 +826,8 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -825,15 +835,21 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
   background-color: var(--background-primary-color);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function);
 }
 
 .button-modal {
