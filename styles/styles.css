@@ -91,6 +91,8 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+
+  transition: color 250ms var(--timing-function);
 }
 .logo:hover,
 .logo:focus {
@@ -121,6 +123,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link::after {
@@ -173,6 +177,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
 }
 .auth-nav-link:hover,
 .auth-nav-link:focus {
@@ -467,6 +473,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 
 .team-soc-link:hover,
@@ -504,6 +513,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: border 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -686,6 +698,8 @@ img {
   margin-bottom: 20px;
 
   color: var(--background-primary-color);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .footer-logo:hover,
@@ -727,6 +741,8 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .footer-mail:hover,
@@ -741,6 +757,8 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .footer-tel:hover,
@@ -783,6 +801,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
