@@ -70,8 +70,8 @@ img {
 /*------HEADER------*/
 
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /*padding-top: 25px;
+  padding-bottom: 25px;*/
 
   background-color: var(--background-primary-color);
   border-bottom: 1px solid var(--background-page-color);
@@ -91,13 +91,8 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+}
 
-  transition: color 250ms var(--timing-function);
-}
-.logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-}
 .logo > .logo-web {
   color: var(--accent-color);
 }
@@ -115,8 +110,9 @@ img {
 
 .site-nav .link {
   position: relative;
+  display: block;
 
-  padding: 10px 0px 33px 0px;
+  padding: 32px 0px 32px 0px;
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -167,6 +163,7 @@ img {
 .auth-nav-link {
   display: flex;
   align-items: center;
+  padding: 32px 0px 32px 0px;
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -368,12 +365,6 @@ img {
 }
 
 .work-text {
-  position: absolute;
-  bottom: 24px;
-  left: 83px;
-
-  width: 205px;
-  height: 15px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -386,6 +377,9 @@ img {
 .work-bg-text {
   position: absolute;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 370px;
   height: 70px;
@@ -687,13 +681,6 @@ img {
   margin-bottom: 20px;
 
   color: var(--background-primary-color);
-
-  transition: color 250ms var(--timing-function);
-}
-
-.footer-logo:hover,
-.footer-logo:focus {
-  color: var(--accent-color);
 }
 
 .footer-web {
@@ -851,4 +838,8 @@ img {
   padding: 0;
   margin-top: 8px;
   margin-right: 8px;
+}
+
+.button-modal:hover {
+  cursor: pointer;
 }
