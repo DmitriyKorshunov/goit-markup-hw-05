@@ -619,9 +619,6 @@ img {
 
 .portfolio-title-text {
   padding: 20px 24px;
-  /*border-left: 1px solid var(--background-page-color);
-  border-right: 1px solid var(--background-page-color);
-  border-bottom: 1px solid var(--background-page-color);*/
 }
 
 .text-portfolio {
@@ -838,8 +835,12 @@ img {
   padding: 0;
   margin-top: 8px;
   margin-right: 8px;
+
+  transform: rotate(0);
+  transition: transform 250ms var(--timing-function);
 }
 
 .button-modal:hover {
   cursor: pointer;
+  transform: rotate(180deg);
 }
